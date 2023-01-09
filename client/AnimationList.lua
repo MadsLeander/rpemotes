@@ -264,6 +264,10 @@ RP.Walks = {
     ["Femme"] = {
         "move_f@femme@"
     },
+    ["Femme2"] = {
+        "move_m@femme@",
+        "Femme 2 - Male"
+    },
     ["Fire"] = {
         "move_characters@franklin@fire"
     },
