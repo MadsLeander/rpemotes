@@ -3,7 +3,7 @@
 
 fx_version 'cerulean'
 game 'gta5'
-version '1.0.8'
+version '1.0.9'
 lua54 'yes'
 
 dependencies {
@@ -70,8 +70,6 @@ data_file 'DLC_ITYP_REQUEST' 'stream/bzzz_food_dessert_a.ytyp'
 
 data_file 'DLC_ITYP_REQUEST' 'stream/bzzz_prop_give_gift.ytyp'
 
-data_file 'DLC_ITYP_REQUEST' 'stream/bzzz_prop_cake_love_001.ytyp'
-
 data_file 'DLC_ITYP_REQUEST' 'stream/ultra_ringcase.ytyp'
 
 data_file 'DLC_ITYP_REQUEST' 'stream/bzzz_food_xmas22.ytyp'
@@ -79,4 +77,12 @@ data_file 'DLC_ITYP_REQUEST' 'stream/bzzz_food_xmas22.ytyp'
 data_file 'DLC_ITYP_REQUEST' 'stream/knjgh_pizzas.ytyp'
 
 data_file 'DLC_ITYP_REQUEST' 'stream/pata_christmasfood.ytyp'
+
+data_file 'DLC_ITYP_REQUEST' 'stream/bzzz_prop_cake_love_001.ytyp'
+
+data_file 'DLC_ITYP_REQUEST' 'stream/bzzz_prop_cake_birthday_001.ytyp'
+
+data_file 'DLC_ITYP_REQUEST' 'stream/bzzz_prop_cake_baby_001.ytyp'
+
+data_file 'DLC_ITYP_REQUEST' 'stream/bzzz_prop_cake_casino001.ytyp'
 
