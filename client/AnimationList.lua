@@ -275,7 +275,7 @@ RP.Walks = {
     },
     ["Femme2"] = {
         "move_m@femme@",
-        "Femme 2 - Male"
+        "Femme 2"
     },
     ["Fire"] = {
         "move_characters@franklin@fire"
@@ -16657,6 +16657,7 @@ RP.PropEmotes = {
             EmoteLoop = true
         }
     },
+	["patrolf1"] = {
         "amb@world_human_security_shine_torch@male@base",
         "base",
         "Patrol - On Foot",
