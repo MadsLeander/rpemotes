@@ -139,6 +139,9 @@ RP.Walks = {
     ["Arrogant"] = {
         "move_f@arrogant@a"
     },
+    ["Bigfoot"] = {
+        "move_characters@orleans@core@"
+    },
     ["Butch"] = {
         "move_m@hurry_butch@a"
     },
@@ -196,6 +199,9 @@ RP.Walks = {
         "move_m@business@c",
         "Cop 3"
     },
+    ["Coward"] = {
+        "move_m@coward"
+    },
     ["Chubbymale"] = {
         "move_chubby",
         "Chubby Male"
@@ -206,6 +212,9 @@ RP.Walks = {
      },
     ["Crouched"] = {
         "move_ped_crouched",
+    },
+    ["Dave"] = {
+        "move_characters@dave_n"
     },
     ["Defaultfemale"] = {
         "move_f@multiplayer",
@@ -294,6 +303,10 @@ RP.Walks = {
         "move_m@flee@b",
         "Flee 4"
     },
+    ["Flee5"] = {
+        "move_m@flee@c",
+        "Flee 5"
+    },
     ["Franklin"] = {
         "move_p_m_one"
     },
@@ -315,6 +328,10 @@ RP.Walks = {
     ["Gangster5"] = {
         "move_m@gangster@var_i",
         "Gangster 5"
+    },
+    ["Gangster6"] = {
+        "move_f@gangster@ng",
+        "Gangster 6 - Female"
     },
     ["Genenric"] = {
         "move_m@generic",
@@ -396,6 +413,9 @@ RP.Walks = {
         "move_p_m_zero_slow",
         "Janitor 2"
     },
+    ["Jimmy"] = {
+        "move_characters@jimmy"
+    },
     ["Jog"] = {
         "move_m@jog@"
     },
@@ -424,6 +444,9 @@ RP.Walks = {
     ["Muscle"] = {
         "move_m@muscle@a"
     },
+    ["Patricia"] = {
+        "move_characters@patricia"
+    },
     ["Posh"] = {
         "move_m@posh@"
     },
@@ -433,6 +456,9 @@ RP.Walks = {
     },
     ["Quick"] = {
         "move_m@quick"
+    },
+    ["Ron"] = {
+        "move_characters@ron"
     },
     ["Runner"] = {
         "female_fast_runner"
@@ -479,6 +505,10 @@ RP.Walks = {
     ["Swagger"] = {
         "move_m@swagger"
     },
+    ["Swagger2"] = {
+        "move_m@swagger@b",
+        "Swagger 2"
+    },
     ["Tough"] = {
         "move_m@tough_guy@"
     },
@@ -504,6 +534,10 @@ RP.Walks = {
     },
     ["Trevor"] = {
         "move_p_m_two"
+    },
+    ["Veryslow"] = {
+        "move_m@leaf_blower",
+        "Very Slow"
     },
     ["Wide"] = {
         "move_m@bag"
@@ -16619,6 +16653,145 @@ RP.PropEmotes = {
               -110.1784,
                2.9283,
               -12.5092
+            },
+            EmoteLoop = true
+        }
+    },
+        "amb@world_human_security_shine_torch@male@base",
+        "base",
+        "Patrol - On Foot",
+        AnimationOptions = {
+            Prop = 'prop_cs_police_torch_02',
+            PropBone = 60309,
+            PropPlacement = {
+               0.0,
+               0.0,
+               0.0,
+               0.0,
+               0.0,
+               80.0000
+            },
+            EmoteLoop = true,
+			EmoteMoving = true
+        }
+    },
+    ["patrolf2"] = {
+        "amb@world_human_security_shine_torch@male@idle_b",
+        "idle_e",
+        "Patrol - On Foot 2",
+        AnimationOptions = {
+            Prop = 'prop_cs_police_torch_02',
+            PropBone = 60309,
+            PropPlacement = {
+               0.0,
+               0.0,
+               0.0,
+               0.0,
+               0.0,
+               80.0000
+            },
+            EmoteLoop = true,
+			EmoteMoving = true
+        }
+    },
+    ["patrolf3"] = {
+        "amb@world_human_security_shine_torch@male@idle_a",
+        "idle_a",
+        "Patrol - On Foot 3",
+        AnimationOptions = {
+            Prop = 'prop_cs_police_torch_02',
+            PropBone = 60309,
+            PropPlacement = {
+               0.0,
+               0.0,
+               0.0,
+               0.0,
+               0.0,
+               80.0000
+            },
+            EmoteLoop = true,
+			EmoteMoving = true
+        }
+    },
+    ["patrolf4"] = { -- Huge thanks to MadsLeander on GitHub
+        "amb@incar@male@patrol@torch@base",
+        "base",
+        "Patrol - On Foot 4 Over The Shoulder",
+        AnimationOptions = {
+            Prop = 'prop_cs_police_torch_02',
+            PropBone = 28422, -- Right Wrist 
+            PropPlacement = {
+                0.0,
+               -0.00100,
+                0.0,
+                0.0,
+				0.0,
+                90.0
+            },
+            SecondProp = 'prop_cs_hand_radio',
+            SecondPropBone = 60309, -- Left Wrist
+            SecondPropPlacement = {
+                0.0560,
+                0.0470,
+                0.0110,
+              -43.82733,
+              164.6747,
+			   -7.5569
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["patrolcar"] = {
+        "amb@incar@male@patrol@torch@base",
+        "base",
+        "Patrol Car - Front",
+        AnimationOptions = {
+            Prop = 'prop_cs_police_torch_02',
+            PropBone = 28422,
+            PropPlacement = {
+               0.0,
+              -0.0100,
+              -0.0100,
+               0.0,
+               0.0,
+             100.0000
+            },
+            EmoteLoop = true
+        }
+    },
+    ["patrolcarl"] = {
+        "amb@incar@male@patrol@torch@idle_b",
+        "idle_d",
+        "Patrol Car - Left",
+        AnimationOptions = {
+            Prop = 'prop_cs_police_torch_02',
+            PropBone = 28422,
+            PropPlacement = {
+               0.0,
+              -0.0100,
+              -0.0100,
+               0.0,
+               0.0,
+             100.0000
+            },
+            EmoteLoop = true
+        }
+    },
+    ["patrolcarr"] = {
+        "amb@incar@male@patrol@torch@idle_a",
+        "idle_a",
+        "Patrol Car - Right",
+        AnimationOptions = {
+            Prop = 'prop_cs_police_torch_02',
+            PropBone = 28422,
+            PropPlacement = {
+               0.0,
+              -0.0100,
+              -0.0100,
+               0.0,
+               0.0,
+             100.0000
             },
             EmoteLoop = true
         }
