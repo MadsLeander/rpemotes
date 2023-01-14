@@ -4991,6 +4991,28 @@ RP.AnimalEmotes = {
 }
 
 
+--- EXIT EMOTES ---
+
+RP.Exits = {
+    ["getup"] = {
+        "get_up@sat_on_floor@to_stand",
+        "getup_0",
+        "Get Up",
+        AnimationOptions = {
+            EmoteDuration = 2000
+        }
+    },
+	["offchair"] = {
+        "switch@michael@sitting",
+        "exit_forward",
+        "Off Chair",
+        AnimationOptions = {
+            EmoteDuration = 1000
+        }
+    }
+}
+
+
 --- EMOTES NO PROPS ---
 
 RP.Emotes = {
@@ -6218,7 +6240,9 @@ RP.Emotes = {
         "sit_phone_phoneputdown_idle_nowork",
         "Sit",
         AnimationOptions = {
-            EmoteLoop = true
+            EmoteLoop = true,
+            ExitEmote = "getup",
+            ExitEmoteType = "Exits"
         }
     },
     ["sit2"] = {
@@ -6226,7 +6250,9 @@ RP.Emotes = {
         "barry_3_sit_loop",
         "Sit 2",
         AnimationOptions = {
-            EmoteLoop = true
+            EmoteLoop = true,
+            ExitEmote = "getup",
+            ExitEmoteType = "Exits"
         }
     },
     ["sit3"] = {
@@ -6234,7 +6260,9 @@ RP.Emotes = {
         "idle_a",
         "Sit 3",
         AnimationOptions = {
-            EmoteLoop = true
+            EmoteLoop = true,
+            ExitEmote = "getup",
+            ExitEmoteType = "Exits"
         }
     },
     ["sit4"] = {
@@ -6242,7 +6270,9 @@ RP.Emotes = {
         "idle_a",
         "Sit 4",
         AnimationOptions = {
-            EmoteLoop = true
+            EmoteLoop = true,
+            ExitEmote = "getup",
+            ExitEmoteType = "Exits"
         }
     },
     ["sit5"] = {
@@ -6250,7 +6280,9 @@ RP.Emotes = {
         "owner_idle",
         "Sit 5",
         AnimationOptions = {
-            EmoteLoop = true
+            EmoteLoop = true,
+            ExitEmote = "getup",
+            ExitEmoteType = "Exits"
         }
     },
     ["sit6"] = {
@@ -6258,7 +6290,9 @@ RP.Emotes = {
         "idle_a_jimmy",
         "Sit 6",
         AnimationOptions = {
-            EmoteLoop = true
+            EmoteLoop = true,
+            ExitEmote = "getup",
+            ExitEmoteType = "Exits"
         }
     },
     ["sit7"] = {
@@ -6266,7 +6300,9 @@ RP.Emotes = {
         "lowalone_base_laz",
         "Sit 7",
         AnimationOptions = {
-            EmoteLoop = true
+            EmoteLoop = true,
+            ExitEmote = "getup",
+            ExitEmoteType = "Exits"
         }
     },
     ["sit8"] = {
@@ -6274,7 +6310,9 @@ RP.Emotes = {
         "mics3_15_base_jimmy",
         "Sit 8",
         AnimationOptions = {
-            EmoteLoop = true
+            EmoteLoop = true,
+            ExitEmote = "getup",
+            ExitEmoteType = "Exits"
         }
     },
     ["sit9"] = {
@@ -6282,7 +6320,9 @@ RP.Emotes = {
         "idle_a",
         "Sit 9",
         AnimationOptions = {
-            EmoteLoop = true
+            EmoteLoop = true,
+            ExitEmote = "getup",
+            ExitEmoteType = "Exits"
         }
     },
     ["sitlow"] = {
@@ -6306,7 +6346,9 @@ RP.Emotes = {
         "sit_phone_phoneputdown_sleeping-noworkfemale",
         "Sit Sad",
         AnimationOptions = {
-            EmoteLoop = true
+            EmoteLoop = true,
+            ExitEmote = "getup",
+            ExitEmoteType = "Exits"
         }
     },
     ["sitscared"] = {
@@ -6314,7 +6356,9 @@ RP.Emotes = {
         "hit_loop_ped_b",
         "Sit Scared",
         AnimationOptions = {
-            EmoteLoop = true
+            EmoteLoop = true,
+            ExitEmote = "getup",
+            ExitEmoteType = "Exits"
         }
     },
     ["sitscared2"] = {
@@ -6322,7 +6366,9 @@ RP.Emotes = {
         "flinch_loop",
         "Sit Scared 2",
         AnimationOptions = {
-            EmoteLoop = true
+            EmoteLoop = true,
+            ExitEmote = "getup",
+            ExitEmoteType = "Exits"
         }
     },
     ["sitscared3"] = {
@@ -6330,7 +6376,9 @@ RP.Emotes = {
         "flinch_loop",
         "Sit Scared 3",
         AnimationOptions = {
-            EmoteLoop = true
+            EmoteLoop = true,
+            ExitEmote = "getup",
+            ExitEmoteType = "Exits"
         }
     },
     ["sitdrunk"] = {
@@ -6338,7 +6386,9 @@ RP.Emotes = {
         "base",
         "Sit Drunk",
         AnimationOptions = {
-            EmoteLoop = true
+            EmoteLoop = true,
+            ExitEmote = "getup",
+            ExitEmoteType = "Exits"
         }
     },
     ["sitchair2"] = {
@@ -6346,7 +6396,9 @@ RP.Emotes = {
         "ig_5_p3_base",
         "Sit Chair 2",
         AnimationOptions = {
-            EmoteLoop = true
+            EmoteLoop = true,
+			ExitEmote = "offchair",
+            ExitEmoteType = "Exits"
         }
     },
     ["sitchair3"] = {
@@ -6354,7 +6406,9 @@ RP.Emotes = {
         "base_amanda",
         "Sit Chair 3 (Female)",
         AnimationOptions = {
-            EmoteLoop = true
+            EmoteLoop = true,
+			ExitEmote = "offchair",
+            ExitEmoteType = "Exits"
         }
     },
     ["sitchair4"] = {
@@ -6362,7 +6416,9 @@ RP.Emotes = {
         "base",
         "Sit Chair 4",
         AnimationOptions = {
-            EmoteLoop = true
+            EmoteLoop = true,
+			ExitEmote = "offchair",
+            ExitEmoteType = "Exits"
         }
     },
     ["sitchair5"] = {
@@ -6370,7 +6426,9 @@ RP.Emotes = {
         "mics3_15_base_tracy",
         "Sit Chair Legs Crossed",
         AnimationOptions = {
-            EmoteLoop = true
+            EmoteLoop = true,
+			ExitEmote = "offchair",
+            ExitEmoteType = "Exits"
         }
     },
     ["sitchair6"] = {
@@ -6378,7 +6436,9 @@ RP.Emotes = {
         "base",
         "Sit Chair Lean Back",
         AnimationOptions = {
-            EmoteLoop = true
+            EmoteLoop = true,
+			ExitEmote = "offchair",
+            ExitEmoteType = "Exits"
         }
     },
     ["sitchairside"] = {
@@ -6386,7 +6446,9 @@ RP.Emotes = {
         "ig_2_alt1_base",
         "Sit Chair Side",
         AnimationOptions = {
-            EmoteLoop = true
+            EmoteLoop = true,
+			ExitEmote = "offchair",
+            ExitEmoteType = "Exits"
         }
     },
     ["sitcute"] = { -- Custom Emote By QueenSistersAnimations
@@ -6396,6 +6458,8 @@ RP.Emotes = {
         AnimationOptions = {
             EmoteLoop = true,
             EmoteMoving = false,
+			ExitEmote = "offchair",
+            ExitEmoteType = "Exits"
        }
     },
     ["situp"] = {
@@ -7783,6 +7847,30 @@ RP.Emotes = {
             EmoteLoop = false,
         },
         AdultAnimation = true
+    },
+    ["calldog"] = {
+        "switch@franklin@plays_w_dog",
+        "001916_01_fras_v2_9_plays_w_dog_idle",
+        "Call Dog",
+        AnimationOptions = {
+            EmoteLoop = true,
+        }
+    },
+    ["calldogr"] = {
+        "missfra0_chop_find",
+        "call_chop_r",
+        "Call Dog - Right",
+        AnimationOptions = {
+            EmoteLoop = false,
+        }
+    },
+    ["calldogl"] = {
+        "missfra0_chop_find",
+        "call_chop_l",
+        "Call Dog - Left",
+        AnimationOptions = {
+            EmoteLoop = false,
+        }
     },
 
 
@@ -16646,7 +16734,9 @@ RP.PropEmotes = {
                 88.6103,
                 -1.4385
             },
-            EmoteLoop = true
+            EmoteLoop = true,
+            ExitEmote = "getup",
+            ExitEmoteType = "Exits"
         }
     },
 	["crackhead"] = {
