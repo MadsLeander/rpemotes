@@ -3,7 +3,7 @@
 
 fx_version 'cerulean'
 game 'gta5'
-version '1.1.0'
+version '1.1.1'
 lua54 'yes'
 
 dependencies {
@@ -86,4 +86,6 @@ data_file 'DLC_ITYP_REQUEST' 'stream/bzzz_prop_cake_birthday_001.ytyp'
 data_file 'DLC_ITYP_REQUEST' 'stream/bzzz_prop_cake_baby_001.ytyp'
 
 data_file 'DLC_ITYP_REQUEST' 'stream/bzzz_prop_cake_casino001.ytyp'
+
+data_file 'DLC_ITYP_REQUEST' 'stream/taymckenzienz_skateboards.ytyp'
 

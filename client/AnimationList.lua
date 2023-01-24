@@ -8012,6 +8012,15 @@ RP.Emotes = {
             EmoteLoop = false,
         }
     },
+    ["block"] = {
+        "missheist_agency3ashield_face",
+        "idle",
+        "Block Face",
+        AnimationOptions = {
+            EmoteMoving = true,
+			EmoteLoop = true,
+        }
+    },
 
 
     -----------------------------------------------------------------------------------------------------------
@@ -13514,30 +13523,78 @@ RP.PropEmotes = {
         }
     },
     ["puke"] = {
-    "missheistpaletoscore1leadinout",
-    "trv_puking_leadout",
-    "Puke",
-    AnimationOptions = {
-        EmoteLoop = false,
-        EmoteMoving = true,
-        PtfxAsset = "scr_paletoscore",
-        PtfxName = "scr_trev_puke",
-        PtfxNoProp = true,
-        PtfxBone = 31086,
-        PtfxPlacement = {
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            1.0
+        "missheistpaletoscore1leadinout",
+        "trv_puking_leadout",
+        "Puke",
+        AnimationOptions = {
+            EmoteLoop = false,
+            EmoteMoving = true,
+            PtfxAsset = "scr_paletoscore",
+            PtfxName = "scr_trev_puke",
+            PtfxNoProp = true,
+            PtfxBone = 31086,
+            PtfxPlacement = {
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['puke'],
+            PtfxWait = 200,
+            PtfxCanHold = true
         },
-        PtfxInfo = Config.Languages[Config.MenuLanguage]['puke'],
-        PtfxWait = 200,
-        PtfxCanHold = true
     },
-},
+    ["puke2"] = {
+        "anim@scripted@ulp_missions@injured_agent@",
+        "idle",
+        "Puke 2",
+        AnimationOptions = {
+            EmoteLoop = true,
+            PtfxAsset = "scr_paletoscore",
+            PtfxName = "scr_trev_puke",
+            PtfxNoProp = true,
+            PtfxBone = 31086,
+            PtfxPlacement = {
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['puke'],
+            PtfxWait = 200,
+            PtfxCanHold = true
+        },
+    },
+    ["puke3"] = {
+        "anim@scripted@freemode@throw_up_toilet@male@",
+        "vomit",
+        "Puke 3",
+        AnimationOptions = {
+            EmoteLoop = true,
+            PtfxAsset = "scr_paletoscore",
+            PtfxName = "scr_trev_puke",
+            PtfxNoProp = true,
+            PtfxBone = 31086,
+            PtfxPlacement = {
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['puke'],
+            PtfxWait = 200,
+            PtfxCanHold = true
+        },
+    },
     ["selfie"] = {
         "anim@mp_player_intuppertake_selfie",
         "idle_a",
@@ -16762,6 +16819,24 @@ RP.PropEmotes = {
             EmoteMoving = true
         }
     },
+    ["airportbag2"] = { -- Custom Emote By Chocoholic Animations 
+        "chocoholic@single63",
+        "single63_clip",
+        "Airport Bag Pose",
+        AnimationOptions = {
+            Prop = "prop_suitcase_03",
+            PropBone = 58869,
+            PropPlacement = {
+                0.2100,
+                0.4100,
+               -0.3600,
+                56.9074,
+               -6.1917,
+               -24.3334
+            },
+            EmoteLoop = true,
+        }
+    },
     ["megaphone"] = { -- Custom Emote By MollyEmotes
         "molly@megaphone",
         "megaphone_clip",
@@ -17254,8 +17329,7 @@ RP.PropEmotes = {
         "missheistdocksprep1hold_cellphone",
         "static",
         "Papers",
-        AnimationOptions =
-        {
+        AnimationOptions = {
             Prop = "xm3_prop_xm3_papers_01a",
             PropBone = 18905,
             PropPlacement = {
@@ -17306,6 +17380,249 @@ RP.PropEmotes = {
             },
             EmoteLoop = true,
 			EmoteMoving = true,
+        }
+    },
+    ["skatesit"] = { -- Custom Emote By CMG Mods 
+       "skateboardposecmganimation",
+        "skateboardposecmg_clip",
+        "Skateboard - Sit",
+        AnimationOptions = {
+            Prop = 'taymckenzienz_skateboard01',
+            PropBone = 0,
+            PropPlacement = {
+               0.0,
+			   0.0400,
+			  -0.2300,
+			   0.0,
+			   0.0,
+			   0.0
+            },
+            EmoteLoop = true,
+        }
+    },
+	["skatesit2"] = { -- Custom Emote By Chocoholic Animations 
+        "chocoholic@skate2",
+        "skate2_clip",
+        "Skateboard - Sit 2",
+        AnimationOptions = {
+            Prop = "taymckenzienz_skateboard02",
+            PropBone = 0,
+            PropPlacement = {
+                0.0,
+			   -0.0200,
+			   -0.2900,
+			   0.0,
+			   0.0,
+			   0.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = false
+        }
+    },
+    ["skatehold"] = {
+        "molly@boombox1",
+        "boombox1_clip",
+        "Skateboard - Hold Female",
+        AnimationOptions = {
+            Prop = "prop_cs_sol_glasses",
+            PropBone = 31086,
+            PropPlacement = {
+                0.0440,
+                0.0740,
+                0.0000,
+                -160.9843,
+                -88.7288,
+                -0.6197
+            },
+            SecondProp = 'taymckenzienz_skateboard01',
+            SecondPropBone = 60309,
+            SecondPropPlacement = {
+               -0.0050,
+                0.0320,
+                0.1640,
+                44.6076,
+               -112.2983,
+                -86.1199
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["skatehold2"] = { -- Emote by Molly
+        "beachanims@molly",
+        "beachanim_surf_clip",
+        "Skatebboard - Hold Female 2",
+        AnimationOptions = {
+            Prop = "taymckenzienz_skateboard01",
+            PropBone = 28422,
+            PropPlacement = {
+               -0.1020,
+                0.2240,
+                0.0840,
+                5.6655,
+               175.3526,
+               49.7964
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["skatehold3"] = {
+        "molly@boombox1",
+        "boombox1_clip",
+        "Skateboard - Hold Male",
+        AnimationOptions = {
+            Prop = "prop_cs_sol_glasses",
+            PropBone = 31086,
+            PropPlacement = {
+                0.0440,
+                0.0740,
+                0.0000,
+                -160.9843,
+                -88.7288,
+                -0.6197
+            },
+            SecondProp = 'taymckenzienz_skateboard02',
+            SecondPropBone = 60309,
+            SecondPropPlacement = {
+               -0.0050,
+                0.0320,
+                0.1640,
+                44.6076,
+               -112.2983,
+                -86.1199
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["skatehold4"] = { -- Emote by Molly
+        "beachanims@molly",
+        "beachanim_surf_clip",
+        "Skatebboard - Hold Male 2",
+        AnimationOptions = {
+            Prop = "taymckenzienz_skateboard02",
+            PropBone = 28422,
+            PropPlacement = {
+               -0.1020,
+                0.2240,
+                0.0840,
+                5.6655,
+               175.3526,
+               49.7964
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["skatehold5"] = { -- Custom Emote By Chocoholic Animations 
+        "chocoholic@skate4",
+        "skate4_clip",
+        "Skateboard - Hold Male 5",
+        AnimationOptions = {
+            Prop = "taymckenzienz_skateboard02",
+            PropBone = 28422,
+            PropPlacement = {
+                0.2780,
+               -0.0200,
+               -0.0700,
+               -180.0000,
+                28.0000,
+                0.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = false
+        }
+    },
+    ["mafia"] = { -- Custom Emote By Chocoholic Animations
+        "chocoholic@single12",
+        "single12_clip",
+        "Mafia Boss - Gun Point",
+        AnimationOptions = {
+            Prop = "w_pi_revolver_b",
+            PropBone = 28422,
+            PropPlacement = {
+                0.1150,
+                0.0590,
+               -0.0100,
+               -69.7101,
+                1.4074,
+               -13.7554
+            },
+            SecondProp = 'prop_cigar_01',
+            SecondPropBone = 17188,
+            SecondPropPlacement = {
+                0.0450,
+                0.0130,
+                0.0170,
+                0.0,
+                0.0,
+                0.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["kick"] = {
+        "missheistdockssetup1ig_13@kick_idle",
+        "guard_beatup_kickidle_guard1",
+        "Kick",
+        AnimationOptions = {
+            EmoteLoop = true
+        }
+    },
+    ["kick2"] = {
+        "missheistdockssetup1ig_13@kick_idle",
+        "guard_beatup_kickidle_guard2",
+        "Kick 2",
+        AnimationOptions = {
+            EmoteLoop = true
+        }
+    },
+    ["kick3"] = {
+        "melee@unarmed@streamed_core",
+        "kick_close_a",
+        "Kick 3",
+        AnimationOptions = {
+            EmoteDuration = 1750
+        }
+    },
+    ["shield"] = {
+        "beachanims@molly",
+        "beachanim_surf_clip",
+        "Shield",
+        AnimationOptions = {
+            Prop = "prop_riot_shield",
+            PropBone = 18905,
+            PropPlacement = {
+                -0.04,
+                -0.06,
+                0.0,
+                4.04,
+                108.17,
+                -17.48
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["shield2"] = {
+        "beachanims@molly",
+        "beachanim_surf_clip",
+        "Shield 2",
+        AnimationOptions = {
+            Prop = "prop_ballistic_shield",
+            PropBone = 18905,
+            PropPlacement = {
+                0.01,
+                -0.1,
+                -0.07,
+                1.83,
+                105.38,
+                -10.14
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
         }
     },
 }
