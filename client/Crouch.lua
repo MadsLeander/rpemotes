@@ -164,10 +164,10 @@ local function CrouchKeyPressed()
         local crouchKey = GetControlInstructionalButton(0, 0xD2D0BEBA, false)
         local duckKey = GetControlInstructionalButton(0, 36, false)
 
-        -- If they are the same and we aren't prone, then check if we are in stealth mode and how long ago the last button press was. 
+        -- If they are the same and we aren't prone, then check if we are in stealth mode and how long ago the last button press was.
         if crouchKey == duckKey and not IsProne then
             local timer = GetGameTimer()
-    
+
             -- If we are in stealth mode and we have already pressed the button in the last second
             if GetPedStealthMovement(playerPed) == 1 and timer - lastKeyPress < 1000 then
                 DisableControlAction(0, 36, true) -- Disable INPUT_DUCK this frame
@@ -274,6 +274,8 @@ end
 
 local function CrawlThread()
     CreateThread(function()
+        Wait(400)
+
         local forceEnd = false
 
         while IsProne do
@@ -369,6 +371,11 @@ local function CrawlKeyPressed()
         return
     end
 
+    -- Don't start/stop to crawl if we are in the pause menu
+    if IsPauseMenuActive() then
+        return
+    end
+
     -- If already prone, then stop
     if IsProne then
         IsProne = false
@@ -392,7 +399,7 @@ local function CrawlKeyPressed()
         return
     end
     inAction = true
-    
+
     -- If we are pointing then stop pointing
     if Pointing then
         Pointing = false
@@ -412,8 +419,8 @@ local function CrawlKeyPressed()
     LoadAnimDict("move_crawlprone2crawlfront")
 
     if ShouldPlayerDiveToCrawl(playerPed) then
-        PlayAnimOnce(playerPed, "move_jump", "dive_start_run", -1)
-        Wait(1050)
+        PlayAnimOnce(playerPed, "explosions", "react_blown_forwards", -1)
+        Wait(1100)
     elseif wasCrouched then
         PlayAnimOnce(playerPed, "amb@world_human_sunbathe@male@front@enter", "enter", -1, 2.0, 0.3)
         Wait(1500)

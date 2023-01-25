@@ -3,8 +3,6 @@ local AnimationDuration = -1
 local ChosenAnimation = ""
 local ChosenDict = ""
 local ChosenAnimOptions = false
-local MostRecentChosenAnimation = ""
-local MostRecentChosenDict = ""
 local MovementType = 0
 local PlayerGender = "male"
 local PlayerHasProp = false
@@ -21,7 +19,6 @@ local AnimationThreadStatus = false
 local CanCancel = true
 local InExitEmote = false
 IsInAnimation = false
-
 
 -- Remove emotes if needed
 
@@ -86,10 +83,6 @@ if Config.EnableXtoCancel then
     RegisterKeyMapping("emotecancel", "Cancel current emote", "keyboard", Config.CancelEmoteKey)
 end
 
-if Config.MenuKeybindEnabled then
-    RegisterKeyMapping("emotemenu", "Open rpemotes menu", "keyboard", Config.MenuKeybind)
-end
-
 if Config.HandsupKeybindEnabled then
     RegisterKeyMapping("handsup", "Put your arms up", "keyboard", Config.HandsupKeybind)
 end
@@ -100,10 +93,10 @@ end
 
 Citizen.CreateThread(function()
     TriggerEvent('chat:addSuggestion', '/e', 'Play an emote',
-        { { name = "emotename", help = "dance, camera, sit or any valid emote." }, 
+        { { name = "emotename", help = "dance, camera, sit or any valid emote." },
             { name = "texturevariation", help = "(Optional) 1, 2, 3 or any number. Will change the texture of some props used in emotes, for example the color of a phone. Enter -1 to see a list of variations." } })
     TriggerEvent('chat:addSuggestion', '/emote', 'Play an emote',
-        { { name = "emotename", help = "dance, camera, sit or any valid emote." },  
+        { { name = "emotename", help = "dance, camera, sit or any valid emote." },
             { name = "texturevariation", help = "(Optional) 1, 2, 3 or any number. Will change the texture of some props used in emotes, for example the color of a phone. Enter -1 to see a list of variations." } })
     if Config.SqlKeybinding then
         TriggerEvent('chat:addSuggestion', '/emotebind', 'Bind an emote',
@@ -126,13 +119,18 @@ if Config.SqlKeybinding then
     RegisterCommand('emotebind', function(source, args, raw) EmoteBindStart(source, args, raw) end, false)
     RegisterCommand('emotebinds', function(source, args, raw) EmoteBindsStart(source, args, raw) end, false)
 end
-RegisterCommand('emotemenu', function(source, args, raw) OpenEmoteMenu() end, false)
-RegisterCommand('emotes', function(source, args, raw) EmotesOnCommand() end, false)
+if Config.MenuKeybindEnabled then
+    RegisterCommand('emoteui', function() OpenEmoteMenu() end, false)
+    RegisterKeyMapping("emoteui", "Open rpemotes menu", "keyboard", Config.MenuKeybind)
+else
+    RegisterCommand('emotemenu', function() OpenEmoteMenu() end, false)
+end
+RegisterCommand('emotes', function() EmotesOnCommand() end, false)
 RegisterCommand('walk', function(source, args, raw) WalkCommandStart(source, args, raw) end, false)
-RegisterCommand('walks', function(source, args, raw) WalksOnCommand() end, false)
-RegisterCommand('emotecancel', function(source, args, raw) EmoteCancel() end, false)
+RegisterCommand('walks', function() WalksOnCommand() end, false)
+RegisterCommand('emotecancel', function() EmoteCancel() end, false)
 
-RegisterCommand('handsup', function(source, args, raw)
+RegisterCommand('handsup', function()
 	if Config.HandsupKeybindEnabled then
 		if IsEntityPlayingAnim(PlayerPedId(), "missminuteman_1ig_2", "handsup_base", 51) then
 			EmoteCancel()
@@ -158,6 +156,11 @@ end)
 -----------------------------------------------------------------------------------------------------
 
 function EmoteCancel(force)
+    -- Don't cancel if we are in an exit emote
+    if InExitEmote then
+        return
+    end
+
     local ply = PlayerPedId()
 	if not CanCancel and force ~= true then return end
     if ChosenDict == "MaleScenario" and IsInAnimation then
@@ -168,11 +171,6 @@ function EmoteCancel(force)
         ClearPedTasksImmediately(ply)
         IsInAnimation = false
         DebugPrint("Forced scenario exit")
-    end
-
-    -- Don't cancel if we are in an exit emote
-    if InExitEmote then
-        return
     end
 
     PtfxNotif = false
@@ -398,7 +396,7 @@ function EmoteCommandStart(source, args, raw)
                         for k, v in ipairs(RP.PropEmotes[name].AnimationOptions.PropTextureVariations) do
                             str = str .. string.format("\n(%s) - %s", k, v.Name)
                         end
-                        
+
                         EmoteChatMessage(string.format(Config.Languages[lang]['invalidvariation'], str), true)
                         OnEmotePlay(RP.PropEmotes[name], 0)
                         return
@@ -499,6 +497,16 @@ function OnEmotePlay(EmoteName, textureVariation)
     -- Don't play a new animation if we are in an exit emote
     if InExitEmote then
         return false
+    end
+
+    if EmoteName.AnimationOptions and EmoteName.AnimationOptions.NotInVehicle and InVehicle then
+        return EmoteChatMessage("You can't play this animation while in vehicle.")
+    end
+
+    if ChosenAnimOptions and ChosenAnimOptions.ExitEmote then
+        if RP.Exits[ChosenAnimOptions.ExitEmote][2] ~= EmoteName[2] then
+            return
+        end
     end
 
     if IsProne then
@@ -632,7 +640,7 @@ function OnEmotePlay(EmoteName, textureVariation)
     RunAnimationThread()
     MostRecentDict = ChosenDict
     MostRecentAnimation = ChosenAnimation
-	
+
     if EmoteName.AnimationOptions then
         if EmoteName.AnimationOptions.Prop then
             PropName = EmoteName.AnimationOptions.Prop
@@ -651,9 +659,9 @@ function OnEmotePlay(EmoteName, textureVariation)
             if not AddPropToPlayer(PropName, PropBone, PropPl1, PropPl2, PropPl3, PropPl4, PropPl5, PropPl6, textureVariation) then return end
             if SecondPropEmote then
                 if not AddPropToPlayer(SecondPropName, SecondPropBone, SecondPropPl1, SecondPropPl2, SecondPropPl3,
-                    SecondPropPl4, SecondPropPl5, SecondPropPl6, textureVariation) then 
+                    SecondPropPl4, SecondPropPl5, SecondPropPl6, textureVariation) then
                     DestroyAllProps()
-                    return 
+                    return
                 end
             end
 
