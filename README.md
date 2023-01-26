@@ -84,6 +84,10 @@ Languages can be selected and / or added in the config.lua.
 
 - Persistent Walkstyles via client KVP 🚶‍♂️
 
+- Crouching 
+
+- Crawling 
+
 - Shared Particle Effects 💨
 
 - QB-Core Framework & SQL Keybinding Support ⚙️
@@ -425,6 +429,8 @@ If you want to modify RpEmotes ***(does not apply if you want to use it for pers
 
 ❌ You are not allowed to claim the custom animations provided within this resource as your own work
 
+❌ You are not allowed to sell this script
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Credits 🤝
@@ -491,6 +497,8 @@ A huge thank  you to the following people for their amazing contributions made t
 - Thank you to [iSentrie](https://forum.cfx.re/u/isentrie/) for additional code and support
 
 - Thank you to Chocoholic Animations for the custom animations
+
+- Thank you to [CrunchyCat](https://www.gta5-mods.com/users/crunchycat) for the custom animations 
 
 - Thank you to you, the community for being patient, showing love and appreciation, and for providing translations.
 
