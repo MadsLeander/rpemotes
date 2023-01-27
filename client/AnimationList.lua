@@ -5324,6 +5324,42 @@ RP.Emotes = {
             EmoteMoving = true
         }
     },
+    ["argue3"] = {
+        "missheistdockssetup1leadinoutig_1", 
+        "lsdh_ig_1_argue_wade", 
+        "Argue 3", 
+        AnimationOptions = {
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    }, 
+    ["argue4"] = {
+        "car_2_mcs_1-6", 
+        "cs_devin_dual-6", 
+        "Argue 4", 
+        AnimationOptions = {            
+            EmoteDuration = 6000,
+            EmoteMoving = true
+        }
+    }, 
+    ["argue5"] = {
+        "anim@amb@casino@brawl@fights@argue@", 
+        "arguement_loop_mp_m_brawler_01", 
+        "Argue Angry 1", 
+        AnimationOptions = {
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    }, 
+    ["argue6"] = {
+        "anim@amb@casino@brawl@fights@argue@", 
+        "arguement_loop_mp_m_brawler_02", 
+        "Argue Angry 2", 
+        AnimationOptions = {
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },  
     ["bartender"] = {
         "anim@amb@clubhouse@bar@drink@idle_a",
         "idle_a_bartender",
@@ -7133,25 +7169,25 @@ RP.Emotes = {
             EmoteDuration = 1000
         }
     },
-    ["holdster"] = {
+    ["holster"] = {
         "move_m@intimidation@cop@unarmed",
         "idle",
-        "Holdster",
+        "Holster",
         AnimationOptions = {
             EmoteLoop = true,
             EmoteMoving = true
         }
     },
-    ["holdster2"] = { --- Custom Emote Provided To RpEmotes By Mads
+    ["holster2"] = { --- Custom Emote Provided To RpEmotes By Mads
         "mads@police_reaching_holster",
         "idle",
-        "Holdster 2",
+        "Holster 2",
         AnimationOptions = {
             EmoteLoop = true,
             EmoteMoving = true
         }
     },
-    ["holdster3"] = {
+    ["holster3"] = {
         "anim@hlstr_7360_walk",
         "holster_walk",
         "Holster 3",
@@ -7160,7 +7196,7 @@ RP.Emotes = {
             EmoteMoving = true,
         }
     },
-	["holdster4"] = {
+	["holster4"] = {
         "anim@hlstr_7360_hold",
         "holster_stop",
         "Holster 4 - Stop",
@@ -7169,7 +7205,7 @@ RP.Emotes = {
             EmoteMoving = true,
         }
     },
-	["holdster5"] = {
+	["holster5"] = {
         "anim@holster_hold_there",
         "holster_hold",
         "Holster 5 - Stop 2",
@@ -8108,6 +8144,25 @@ RP.Emotes = {
             EmoteLoop = true,
             EmoteMoving = false,
         }
+    },
+    ["snot"] = {
+        "move_p_m_two_idles@generic", 
+        "fidget_blow_snot", 
+        "Blow Snot", 
+        AnimationOptions = {
+            EmoteMoving = true,
+            EmoteDuration = 4500,
+        }
+    }, 
+    ["scratch"] = {
+        "move_p_m_two_idles@generic", 
+        "fidget_scratch_balls", 
+        "Scratch Balls", 
+        AnimationOptions = {
+            EmoteMoving = false,
+            EmoteDuration = 4000,
+        },
+        AdultAnimation = true
     },
 
 
@@ -17792,10 +17847,10 @@ RP.PropEmotes = {
             EmoteMoving = true
         }
     },
-	["holdster6"] = {
+	["holster6"] = {
         "anim@hlstr_7360_torch",
         "flsh_ps",
-        "Holdster 6 - Flash Light",
+        "Holster 6 - Flash Light",
         AnimationOptions = {
             Prop = 'prop_cs_police_torch_02',
             PropBone = 60309,
@@ -17811,10 +17866,10 @@ RP.PropEmotes = {
             EmoteMoving = true
         }
     },
-    ["holdster8"] = {
+    ["holster8"] = {
         "anim@holster_walk_torch",
         "flash_ps",
-        "Holdster 8 Flashlight 2",
+        "Holster 8 Flashlight 2",
         AnimationOptions = {
             Prop = 'prop_cs_police_torch_02',
             PropBone = 60309,
