@@ -40,6 +40,14 @@ RP.Expressions = {
         "Expression",
         "electrocuted_1"
     },
+    ["Excited"] = {
+        "Expression",
+        "mood_excited_1"
+    },
+    ["Frustrated"] = {
+        "Expression",
+        "mood_frustrated_1"
+    },
     ["Grumpy"] = {
         "Expression",
         "effort_1"

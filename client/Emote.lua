@@ -531,6 +531,7 @@ function OnEmotePlay(EmoteName, textureVariation)
 
     if ChosenDict == "Expression" then
         SetFacialIdleAnimOverride(PlayerPedId(), ChosenAnimation, 0)
+        if Config.PersistentExpression then SetResourceKvp("expression", ChosenAnimation) end
         return
     end
 
@@ -668,6 +669,18 @@ function OnEmotePlay(EmoteName, textureVariation)
                 TriggerServerEvent("rpemotes:ptfx:syncProp", ObjToNet(prop))
         end
     end
+end
+
+-- Persistent expressions
+if Config.ExpressionsEnabled and Config.PersistentExpression then
+    AddEventHandler('playerSpawned', function()
+        local expression = GetResourceKvpString("expression")
+        
+        if expression ~= nil then
+            Wait(2500) -- Delay, to ensure the player ped has loaded in
+            SetFacialIdleAnimOverride(PlayerPedId(), expression, 0)
+        end
+    end)
 end
 
 -----------------------------------------------------------------------------------------------------
