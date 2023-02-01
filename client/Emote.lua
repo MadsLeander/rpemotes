@@ -19,7 +19,6 @@ local AnimationThreadStatus = false
 local CanCancel = true
 local InExitEmote = false
 IsInAnimation = false
-ToggleEmoteMovement = true
 
 -- Remove emotes if needed
 
@@ -494,8 +493,6 @@ end
 -----------------------------------------------------------------------------------------------------
 
 function OnEmotePlay(EmoteName, textureVariation)
-    local animOption = EmoteName.AnimationOptions
-
     InVehicle = IsPedInAnyVehicle(PlayerPedId(), true)
 	Pointing = false
 
@@ -512,6 +509,7 @@ function OnEmotePlay(EmoteName, textureVariation)
         return false
     end
 
+    local animOption = EmoteName.AnimationOptions
     if animOption and animOption.NotInVehicle and InVehicle then
         return EmoteChatMessage("You can't play this animation while in vehicle.")
     end
@@ -588,18 +586,18 @@ function OnEmotePlay(EmoteName, textureVariation)
         return
     end
 
+    MovementType = 0 -- Default movement type
+
     if InVehicle == 1 then
         MovementType = 51
     elseif animOption then
-        if animOption.EmoteLoop then
-            MovementType = (ToggleEmoteMovement and 51 or 1)
+        if animOption.EmoteMoving then
+            MovementType = 51
+        elseif animOption.EmoteLoop then
+            MovementType = 1
         elseif animOption.EmoteStuck then
-            MovementType = (ToggleEmoteMovement and 50 or 1) -- 110010
-        else
-            MovementType = (ToggleEmoteMovement and 51 or 1)
+            MovementType = 50
         end
-    else
-        MovementType = (ToggleEmoteMovement and 51 or 0)
     end
 
     if animOption then
@@ -651,7 +649,7 @@ function OnEmotePlay(EmoteName, textureVariation)
             if animOption.SecondProp then
                 SecondPropName = animOption.SecondProp
                 SecondPropBone = animOption.SecondPropBone
-            SecondPropPl1, SecondPropPl2, SecondPropPl3, SecondPropPl4, SecondPropPl5, SecondPropPl6 = table.unpack(EmoteName.AnimationOptions.SecondPropPlacement)
+            SecondPropPl1, SecondPropPl2, SecondPropPl3, SecondPropPl4, SecondPropPl5, SecondPropPl6 = table.unpack(animOption.SecondPropPlacement)
                 SecondPropEmote = true
             else
                 SecondPropEmote = false
