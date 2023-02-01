@@ -9,124 +9,102 @@ RP = {}
 
 RP.Expressions = {
     ["Aiming"] = {
-        "Expression",
         "mood_aiming_1"
     },
     ["Angry"] = {
-        "Expression",
         "mood_angry_1"
     },
     ["Burning"] = {
-        "Expression",
         "burning_1"
     },
     ["Crying"] = {
-        "Expression",
         "console_wasnt_fun_end_loop_floyd_facial"
     },
     ["Dead"] = {
-        "Expression",
         "dead_1"
     },
     ["Drunk"] = {
-        "Expression",
         "mood_drunk_1"
     },
     ["Dumb"] = {
-        "Expression",
         "pose_injured_1"
     },
     ["Electrocuted"] = {
-        "Expression",
         "electrocuted_1"
     },
     ["Excited"] = {
-        "Expression",
         "mood_excited_1"
     },
     ["Frustrated"] = {
-        "Expression",
         "mood_frustrated_1"
     },
     ["Grumpy"] = {
-        "Expression",
         "effort_1"
     },
     ["Grumpy2"] = {
-        "Expression",
-        "mood_drivefast_1"
+        "mood_drivefast_1",
+        "Grumpy 2"
     },
     ["Grumpy3"] = {
-        "Expression",
-        "pose_angry_1"
+        "pose_angry_1",
+        "Grumpy 3"
     },
     ["Happy"] = {
-        "Expression",
         "mood_happy_1"
     },
     ["Injured"] = {
-        "Expression",
         "mood_injured_1"
     },
     ["Joyful"] = {
-        "Expression",
         "mood_dancing_low_1"
     },
     ["Mouthbreather"] = {
-        "Expression",
         "smoking_hold_1"
     },
-    ["Never Blink"] = {
-        "Expression",
-        "pose_normal_1"
+    ["Neverblink"] = {
+        "pose_normal_1",
+        "Never Blink"
     },
-    ["One Eye"] = {
-        "Expression",
-        "pose_aiming_1"
+    ["Oneeye"] = {
+        "pose_aiming_1",
+        "One Eye"
     },
     ["Shocked"] = {
-        "Expression",
         "shocked_1"
     },
     ["Shocked2"] = {
-        "Expression",
-        "shocked_2"
+        "shocked_2",
+        "Shocked 2"
     },
     ["Sleeping"] = {
-        "Expression",
         "mood_sleeping_1"
     },
     ["Sleeping2"] = {
-        "Expression",
-        "dead_1"
+        "dead_1",
+        "Sleeping 2"
     },
     ["Sleeping3"] = {
-        "Expression",
-        "dead_2"
+        "dead_2",
+        "Sleeping 3"
     },
     ["Smug"] = {
-        "Expression",
         "mood_smug_1"
     },
     ["Speculative"] = {
-        "Expression",
         "mood_aiming_1"
     },
     ["Stressed"] = {
-        "Expression",
         "mood_stressed_1"
     },
     ["Sulking"] = {
-        "Expression",
         "mood_sulk_1"
     },
     ["Weird"] = {
-        "Expression",
         "effort_2"
     },
     ["Weird2"] = {
-        "Expression",
-        "effort_3"
+        "effort_3",
+        "Weird 2"
     },
 }
 

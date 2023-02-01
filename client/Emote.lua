@@ -357,7 +357,7 @@ function EmoteMenuStart(args, hard, textureVariation)
         end
     elseif etype == "expression" then
         if RP.Expressions[name] ~= nil then
-            OnEmotePlay(RP.Expressions[name])
+            SetPlayerPedExpression(RP.Expressions[name][1], true)
         end
     end
 end
@@ -529,12 +529,6 @@ function OnEmotePlay(EmoteName, textureVariation)
     ChosenAnimOptions = animOption
     AnimationDuration = -1
 
-    if ChosenDict == "Expression" then
-        SetFacialIdleAnimOverride(PlayerPedId(), ChosenAnimation, 0)
-        if Config.PersistentExpression then SetResourceKvp("expression", ChosenAnimation) end
-        return
-    end
-
     if Config.DisarmPlayer then
         if IsPedArmed(PlayerPedId(), 7) then
             SetCurrentPedWeapon(PlayerPedId(), joaat('WEAPON_UNARMED'), true)
@@ -671,17 +665,6 @@ function OnEmotePlay(EmoteName, textureVariation)
     end
 end
 
--- Persistent expressions
-if Config.ExpressionsEnabled and Config.PersistentExpression then
-    AddEventHandler('playerSpawned', function()
-        local expression = GetResourceKvpString("expression")
-        
-        if expression ~= nil then
-            Wait(2500) -- Delay, to ensure the player ped has loaded in
-            SetFacialIdleAnimOverride(PlayerPedId(), expression, 0)
-        end
-    end)
-end
 
 -----------------------------------------------------------------------------------------------------
 ------ Some exports to make the script more standalone! (by Clem76) ---------------------------------
