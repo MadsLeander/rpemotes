@@ -151,7 +151,7 @@ AddEventHandler('onResourceStop', function(resource)
         DestroyAllProps()
         ClearPedTasksImmediately(ply)
         DetachEntity(ply, true, false)
-        ResetPedMovementClipset(ply)
+        ResetPedMovementClipset(ply, 0.8)
         AnimationThreadStatus = false
     end
 end)
