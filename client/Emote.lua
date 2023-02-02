@@ -553,8 +553,7 @@ function OnEmotePlay(EmoteName, textureVariation)
         elseif ChosenDict == "ScenarioObject" then if InVehicle then return end
             BehindPlayer = GetOffsetFromEntityInWorldCoords(PlayerPedId(), 0.0, 0 - 0.5, -0.5);
             ClearPedTasks(PlayerPedId())
-            TaskStartScenarioAtPosition(PlayerPedId(), ChosenAnimation, BehindPlayer['x'], BehindPlayer['y'],
-                BehindPlayer['z'], GetEntityHeading(PlayerPedId()), 0, 1, false)
+            TaskStartScenarioAtPosition(PlayerPedId(), ChosenAnimation, BehindPlayer['x'], BehindPlayer['y'], BehindPlayer['z'], GetEntityHeading(PlayerPedId()), 0, true, false)
             DebugPrint("Playing scenario = (" .. ChosenAnimation .. ")")
             IsInAnimation = true
             RunAnimationThread()
