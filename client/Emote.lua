@@ -240,7 +240,7 @@ function PtfxThis(asset)
         RequestNamedPtfxAsset(asset)
         Wait(10)
     end
-    UseParticleFxAssetNextCall(asset)
+    UseParticleFxAsset(asset)
 end
 
 function PtfxStart()
