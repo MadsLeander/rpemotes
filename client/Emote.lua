@@ -475,9 +475,7 @@ end
 -----------------------------------------------------------------------------------------------------
 
 function CheckGender()
-    local playerPed = PlayerPedId()
-
-    if GetEntityModel(playerPed) == joaat("mp_f_freemode_01") then
+    if GetEntityModel(PlayerPedId()) == joaat("mp_f_freemode_01") then
         PlayerGender = "female"
     else
         PlayerGender = "male"
