@@ -622,8 +622,7 @@ function OnEmotePlay(EmoteName, textureVariation)
             PtfxPrompt = true
             -- RunAnimationThread() -- ? This call should not be required, see if needed with tests
 
-            TriggerServerEvent("rpemotes:ptfx:sync", PtfxAsset, PtfxName, vector3(Ptfx1, Ptfx2, Ptfx3),
-                vector3(Ptfx4, Ptfx5, Ptfx6), PtfxBone, PtfxScale, PtfxColor)
+            TriggerServerEvent("rpemotes:ptfx:sync", PtfxAsset, PtfxName, vector3(Ptfx1, Ptfx2, Ptfx3), vector3(Ptfx4, Ptfx5, Ptfx6), PtfxBone, PtfxScale, PtfxColor)
         else
             DebugPrint("Ptfx = none")
             PtfxPrompt = false
@@ -638,29 +637,29 @@ function OnEmotePlay(EmoteName, textureVariation)
     MostRecentAnimation = ChosenAnimation
 
     if animOption and animOption.Prop then
-            PropName = animOption.Prop
-            PropBone = animOption.PropBone
-            PropPl1, PropPl2, PropPl3, PropPl4, PropPl5, PropPl6 = table.unpack(animOption.PropPlacement)
-            if animOption.SecondProp then
-                SecondPropName = animOption.SecondProp
-                SecondPropBone = animOption.SecondPropBone
+        PropName = animOption.Prop
+        PropBone = animOption.PropBone
+        PropPl1, PropPl2, PropPl3, PropPl4, PropPl5, PropPl6 = table.unpack(animOption.PropPlacement)
+        if animOption.SecondProp then
+            SecondPropName = animOption.SecondProp
+            SecondPropBone = animOption.SecondPropBone
             SecondPropPl1, SecondPropPl2, SecondPropPl3, SecondPropPl4, SecondPropPl5, SecondPropPl6 = table.unpack(animOption.SecondPropPlacement)
-                SecondPropEmote = true
-            else
-                SecondPropEmote = false
+            SecondPropEmote = true
+        else
+            SecondPropEmote = false
+        end
+        Wait(AttachWait)
+        if not AddPropToPlayer(PropName, PropBone, PropPl1, PropPl2, PropPl3, PropPl4, PropPl5, PropPl6, textureVariation) then return end
+        if SecondPropEmote then
+        if not AddPropToPlayer(SecondPropName, SecondPropBone, SecondPropPl1, SecondPropPl2, SecondPropPl3, SecondPropPl4, SecondPropPl5, SecondPropPl6, textureVariation) then
+                DestroyAllProps()
+                return
             end
-            Wait(AttachWait)
-            if not AddPropToPlayer(PropName, PropBone, PropPl1, PropPl2, PropPl3, PropPl4, PropPl5, PropPl6, textureVariation) then return end
-            if SecondPropEmote then
-            if not AddPropToPlayer(SecondPropName, SecondPropBone, SecondPropPl1, SecondPropPl2, SecondPropPl3, SecondPropPl4, SecondPropPl5, SecondPropPl6, textureVariation) then
-                    DestroyAllProps()
-                    return
-                end
-            end
+        end
 
-            -- Ptfx is on the prop, then we need to sync it
-            if animOption.PtfxAsset and not PtfxNoProp then
-                TriggerServerEvent("rpemotes:ptfx:syncProp", ObjToNet(prop))
+        -- Ptfx is on the prop, then we need to sync it
+        if animOption.PtfxAsset and not PtfxNoProp then
+            TriggerServerEvent("rpemotes:ptfx:syncProp", ObjToNet(prop))
         end
     end
 end
