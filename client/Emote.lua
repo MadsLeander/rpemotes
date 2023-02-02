@@ -475,14 +475,14 @@ end
 -----------------------------------------------------------------------------------------------------
 
 function CheckGender()
-    local hashSkinMale = joaat("mp_m_freemode_01")
-    local hashSkinFemale = joaat("mp_f_freemode_01")
+    local playerPed = PlayerPedId()
 
-    if GetEntityModel(PlayerPedId()) == hashSkinMale then
-        PlayerGender = "male"
-    elseif GetEntityModel(PlayerPedId()) == hashSkinFemale then
+    if GetEntityModel(playerPed) == joaat("mp_f_freemode_01") then
         PlayerGender = "female"
+    else
+        PlayerGender = "male"
     end
+
     DebugPrint("Set gender as = (" .. PlayerGender .. ")")
 end
 
