@@ -369,11 +369,11 @@ RP.Walks = {
         "move_m@gangster@var_k",
         "Gangster 14"
     },
-    ["Genenric"] = {
+    ["Generic"] = {
         "move_m@generic",
         "Generic Male"
     },
-    ["Genenric2"] = {
+    ["Generic2"] = {
         "move_f@generic",
         "Generic Female"
     },
@@ -6508,8 +6508,8 @@ RP.Emotes = {
         }
     },
     ["sit3"] = {
-        "amb@world_human_picnic@male@idle_a",
-        "idle_a",
+        "amb@lo_res_idles@",
+        "world_human_picnic_male_lo_res_base",
         "Sit 3",
         AnimationOptions = {
             EmoteLoop = true,
@@ -6518,8 +6518,8 @@ RP.Emotes = {
         }
     },
     ["sit4"] = {
-        "amb@world_human_picnic@female@idle_a",
-        "idle_a",
+        "amb@lo_res_idles@",
+        "world_human_picnic_female_lo_res_base",
         "Sit 4",
         AnimationOptions = {
             EmoteLoop = true,
@@ -8281,6 +8281,132 @@ RP.Emotes = {
         },
         AdultAnimation = true
     },
+	["cartaunt"] = {
+        "missarmenian1driving_taunts@lamar_1",
+        "cmonfrank",
+        "Car Taunt",
+        AnimationOptions = {
+			EmoteMoving = false,
+            EmoteDuration = 2000,
+        }
+    },
+	["cartauntb"] = {
+        "missarmenian1driving_taunts@lamar_1",
+        "cmonmynigga",
+        "Car Taunt 2",
+        AnimationOptions = {
+			EmoteMoving = false,
+            EmoteDuration = 2000,
+        }
+    },
+	["cartauntc"] = {
+        "missarmenian1driving_taunts@lamar_1",
+        "hahahakeepup",
+        "Car Taunt 3",
+        AnimationOptions = {
+			EmoteMoving = false,
+            EmoteDuration = 2000,
+        }
+    },
+	["cartauntd"] = {
+        "missarmenian1driving_taunts@lamar_1",
+        "manthisismeanttobe",
+        "Car Taunt 4",
+        AnimationOptions = {
+			EmoteMoving = false,
+            EmoteDuration = 2000,
+        }
+    },
+	["cartaunte"] = {
+        "missarmenian1driving_taunts@lamar_1",
+        "rememberthis",
+        "Car Taunt 5",
+        AnimationOptions = {
+			EmoteMoving = false,
+            EmoteDuration = 3000,
+        }
+    },
+	["cartauntf"] = {
+        "missarmenian1driving_taunts@lamar_1",
+        "skoolinyoass",
+        "Car Taunt 6",
+        AnimationOptions = {
+			EmoteMoving = false,
+            EmoteDuration = 3000,
+        }
+    },
+	["cartauntg"] = {
+        "missarmenian1driving_taunts@lamar_1",
+        "youaintfuckin",
+        "Car Taunt 7",
+        AnimationOptions = {
+			EmoteMoving = false,
+            EmoteDuration = 2000,
+        }
+    },
+	["cartaunth"] = {
+        "missarmenian1driving_taunts@franklin",
+        "heyidontneedanybody",
+        "Car Taunt 8",
+        AnimationOptions = {
+			EmoteMoving = false,
+            EmoteDuration = 2000,
+        }
+    },
+	["cartaunti"] = {
+        "missarmenian1driving_taunts@franklin",
+        "heymotherfuckayoudriveslowasfuck",
+        "Car Taunt 9",
+        AnimationOptions = {
+			EmoteMoving = false,
+            EmoteDuration = 3000,
+        }
+    },
+	["cartauntj"] = {
+        "missarmenian1driving_taunts@franklin",
+        "kids_on_bicycles",
+        "Car Taunt 10",
+        AnimationOptions = {
+			EmoteMoving = false,
+            EmoteDuration = 2000,
+        }
+    },
+	["cartauntk"] = {
+        "missarmenian1driving_taunts@franklin",
+        "learnhowtouseastick",
+        "Car Taunt 11",
+        AnimationOptions = {
+			EmoteMoving = false,
+            EmoteDuration = 2000,
+        }
+    },
+	["cartauntl"] = {
+        "missarmenian1driving_taunts@franklin",
+        "slowassshit",
+        "Car Taunt 12",
+        AnimationOptions = {
+			EmoteMoving = false,
+            EmoteDuration = 2000,
+        }
+    },
+	["cartauntm"] = {
+        "mp_intro_seq@mcs_7_race_taunt",
+        "mcs_7_taunt_female",
+        "Car Taunt 13",
+        AnimationOptions = {
+			EmoteMoving = false,
+            EmoteDuration = 5000,
+        }
+    },
+	["cartauntn"] = {
+        "mp_intro_seq@mcs_7_race_taunt",
+        "mcs_7_taunt_male",
+        "Car Taunt 14",
+        AnimationOptions = {
+			EmoteMoving = false,
+            EmoteDuration = 5000,
+        }
+    },
 
 
     -----------------------------------------------------------------------------------------------------------
@@ -8745,7 +8871,7 @@ RP.Emotes = {
     ["sexypose6"] = { -- Custom Emote By Little Spoon
         "littlespoon@sexy012",
         "sexy012",
-        "Sexy Pose 5",
+        "Sexy Pose 6",
         AnimationOptions = {
             EmoteLoop = true,
             EmoteMoving = false
@@ -9201,6 +9327,60 @@ RP.PropEmotes = {
             EmoteMoving = true
         }
     },
+    ["cake5"] = {
+        "anim@heists@box_carry@",
+        "idle",
+        "Unicorn Cake",
+        AnimationOptions = { -- Custom Prop By PataMods
+            Prop = 'pata_cake',
+            PropBone = 28422,
+            PropPlacement = {
+                0.0,
+               -0.0700,
+               -0.0400,
+               10.0000,
+                0.0000,
+                0.0000
+            },
+            EmoteMoving = true
+        }
+    },
+    ["cake6"] = {
+        "anim@heists@box_carry@",
+        "idle",
+        "Pride Cake",
+        AnimationOptions = { -- Custom Prop By PataMods
+            Prop = 'pata_cake2',
+            PropBone = 28422,
+            PropPlacement = {
+                0.0,
+               -0.0700,
+               -0.0400,
+               10.0000,
+                0.0000,
+                0.0000
+            },
+            EmoteMoving = true
+        }
+    },
+    ["cake7"] = { -- Custom Prop By PataMods
+        "anim@heists@box_carry@",
+        "idle",
+        "Chocolate Mud Cake",
+        AnimationOptions = {
+            Prop = 'pata_cake3',
+            PropBone = 28422,
+            PropPlacement = {
+               -0.0100,
+               -0.0390,
+               -0.0800,
+               10.0000,
+                0.0000,
+                0.0000
+            },
+            EmoteMoving = true
+        }
+    },
     ["cakew"] = {
         "anim@move_f@waitress",
         "idle",
@@ -9272,6 +9452,63 @@ RP.PropEmotes = {
                 0.0,
                 0.0,
               180.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["cakew5"] = {
+        "anim@move_f@waitress",
+        "idle",
+        "Cake Waiter - Unicorn",
+        AnimationOptions = {
+            Prop = "pata_cake",
+            PropBone = 28422,
+            PropPlacement = {
+                0.0,
+                0.0,
+                0.1100,
+                0.0,
+                0.0,
+               30.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["cakew6"] = {
+        "anim@move_f@waitress",
+        "idle",
+        "Cake Waiter - Pride",
+        AnimationOptions = {
+            Prop = "pata_cake2",
+            PropBone = 28422,
+            PropPlacement = {
+                0.0000,
+                0.0000,
+                0.1100,
+                0.0,
+                0.0,
+               20.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["cakew7"] = { --- Custom Prop & Emote By BzZzi
+        "anim@move_f@waitress",
+        "idle",
+        "Cake Waiter - Chocolate Mud",
+        AnimationOptions = {
+            Prop = "pata_cake3",
+            PropBone = 28422,
+            PropPlacement = {
+                0.0,
+                0.0,
+                0.1100,
+                0.0,
+                0.0,
+               30.0
             },
             EmoteLoop = true,
             EmoteMoving = true
@@ -10591,7 +10828,7 @@ RP.PropEmotes = {
     ["soda"] = {
         "amb@world_human_drinking@coffee@male@idle_a",
         "idle_c",
-        "Soda",
+        "Soda - eCola Can",
         AnimationOptions = {
             Prop = 'prop_ecola_can',
             PropBone = 28422,
@@ -10607,12 +10844,145 @@ RP.PropEmotes = {
             EmoteMoving = true
         }
     },
+    ["soda2"] = {
+        "amb@world_human_drinking@coffee@male@idle_a",
+        "idle_c",
+        "Soda 2 - Sprunk Can",
+        AnimationOptions = {
+            Prop = 'ng_proc_sodacan_01b',
+            PropBone = 28422,
+            PropPlacement = {
+                0.0050,
+               -0.0010,
+               -0.0800,
+                0.0,
+                0.0,
+                160.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+   },
+    ["soda3"] = {
+        "amb@code_human_wander_drinking@female@base",
+        "static",
+        "Soda 3 - P's & Q's Cup",
+        AnimationOptions = {
+            Prop = 'v_ret_fh_bscup',
+            PropBone = 28422,
+            PropPlacement = {
+                0.0,
+                0.0,
+                0.0400,
+                0.0,
+                0.0,
+                0.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["soda4"] = {
+        "amb@code_human_wander_drinking@female@base",
+        "static",
+        "Soda 4 - Burger Shot Cup",
+        AnimationOptions = {
+            Prop = 'prop_cs_bs_cup',
+            PropBone = 28422,
+            PropPlacement = {
+                0.0060,
+                0.0010,
+                0.0,
+                0.0,
+                0.0,
+             -150.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["soda5"] = {
+        "amb@code_human_wander_drinking@female@base",
+        "static",
+        "Soda 5 - eCola Cup",
+        AnimationOptions = {
+            Prop = 'prop_rpemotes_soda03',
+            PropBone = 28422,
+            PropPlacement = {
+                0.0060,
+                0.0010,
+                0.0,
+                0.0,
+                0.0,
+                80.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["soda6"] = {
+        "amb@code_human_wander_drinking@female@base",
+        "static",
+        "Soda 6 - eCola Light Cup",
+        AnimationOptions = {
+            Prop = 'prop_rpemotes_soda04',
+            PropBone = 28422,
+            PropPlacement = {
+                0.0060,
+                0.0010,
+                0.0,
+                0.0,
+                0.0,
+                80.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["soda7"] = {
+        "amb@code_human_wander_drinking@female@base",
+        "static",
+        "Soda 7- Sprunk Cup",
+        AnimationOptions = {
+            Prop = 'prop_rpemotes_soda01',
+            PropBone = 28422,
+            PropPlacement = {
+                0.0060,
+                0.0010,
+                0.0,
+                0.0,
+                0.0,
+                80.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+   },
+    ["soda8"] = {
+        "amb@code_human_wander_drinking@female@base",
+        "static",
+        "Soda 8 - Sprunk Light Cup",
+        AnimationOptions = {
+            Prop = 'prop_rpemotes_soda02',
+            PropBone = 28422,
+            PropPlacement = {
+                0.0060,
+                0.0010,
+                0.0,
+                0.0,
+                0.0,
+                80.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
     ["water"] = {
         "amb@world_human_drinking@coffee@male@idle_a",
         "idle_c",
         "Water",
         AnimationOptions = {
-            Prop = 'ba_prop_club_water_bottle',
+            Prop = 'vw_prop_casino_water_bottle_01a',
             PropBone = 28422,
             PropPlacement = {
                 0.0,
@@ -18250,6 +18620,25 @@ RP.PropEmotes = {
               -10.0000,
                0.0000,
               -0.0000
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["popcorn"] = {
+        "amb@code_human_wander_drinking@female@base",
+        "static",
+        "Popcorn",
+        AnimationOptions = {
+            Prop = 'prop_taymckenzienz_popcorn',
+            PropBone = 28422,
+            PropPlacement = {
+               -0.0200,
+               -0.0100,
+               -0.0700,
+             -179.3626,
+              176.9331,
+               11.9833
             },
             EmoteLoop = true,
             EmoteMoving = true
