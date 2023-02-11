@@ -212,7 +212,6 @@ function EmoteCancel(force)
                 InExitEmote = true
                 SetTimeout(animationOptions.EmoteDuration, function()
                     InExitEmote = false
-                    ClearPedTasks(ply)
                 end)
             end
         else
@@ -534,7 +533,7 @@ function OnEmotePlay(EmoteName, textureVariation)
         end
     end
 
-    if animOption.Prop and PlayerHasProp then
+    if PlayerHasProp then
         DestroyAllProps()
     end
 
