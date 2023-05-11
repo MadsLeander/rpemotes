@@ -4,6 +4,20 @@ RpEmotes is a community driven FiveM emote menu allowing players to express them
 
 <img src="https://forum.cfx.re/uploads/default/original/4X/6/8/c/68cd34ce003360d74d73551f9be7215f5b6c7a31.jpeg" width="800">
 
+<p align="center">
+    <img src="https://img.shields.io/badge/license-GPL--3.0-blue.svg" alt="License">
+    <a href="https://github.com/TayMcKenzieNZ/rpemotes/stargazers"><img src="https://img.shields.io/github/stars/TayMcKenzieNZ/rpemotes.svg?style=social" alt="Star"></a>
+    <a href="https://github.com/TayMcKenzieNZ/rpemotes/network/members"><img src="https://img.shields.io/github/forks/TayMcKenzieNZ/rpemotes.svg?style=social&label=Forks"></a>
+    <a href="https://github.com/TayMcKenzieNZ/rpemotes/graphs/contributors"><img src="https://img.shields.io/github/contributors/TayMcKenzieNZ/rpemotes.svg?style=social&label=Contributors"></a>
+</p>
+
+
+
+
+
+
+
+
 
 
 # **Join Our Official Discord 💬**
@@ -84,6 +98,8 @@ Languages can be selected and / or added in the config.lua.
 
 - Custom Animations with **permission from the community** 🏃
 
+- Custom Props with **permission from the community** 💙
+
 - Facial Expressions 🤪
 
 - Animal Emotes 🐩
@@ -116,7 +132,7 @@ Languages can be selected and / or added in the config.lua.
 
 - Standalone exports
 
-- Props Extractor
+- Props Extractor for anticheat scripts
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -131,6 +147,8 @@ exports["rpemotes"]:IsPlayerProne()
 exports["rpemotes"]:IsPlayerCrawling()
 exports["rpemotes"]:IsPlayerPointing()
 exports["rpemotes"]:IsPlayerInAnim()
+exports["rpemotes"]:toggleWalkstyle(bool, message)
+-- bool to allow or not / message to show the user (optional, default is :"You are unable to change your walking style right now.")
 ```
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -180,7 +198,7 @@ Much like the menu key, `RagdollKeybind` is also using RegisterKeyMapping. It is
 
 # Finger Pointing & Hands Up 👆
 
-Once enabled, players can press `B` on the keyboard to enable standalone finger pointing, and `H` to put their hands up, without the need for unnecessary frameworks or "small resources".
+Once enabled, players can press `B` on the keyboard to enable standalone finger pointing, and `Y` to put their hands up, without the need for unnecessary frameworks or "small resources".
 
 Much like everything else in the menu, server owners can change these keybinds to their own preferences.
 
@@ -216,6 +234,19 @@ To see a list of walkstyles type /walks
 To see a list of moods type /moods
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# No Idle Cam 📷
+
+No Idle Cam allows players to disable the idle camera animation on foot and in vehicle, making RP scenarios, streaming on Twitch, or just general gameplay just a little more enjoyable.
+
+|COMMAND: | ACTION:|
+|---|---|
+| /Idlecamon | deactivates the native|
+| /idlecamoff | enables the native|
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 # Favorite Emote
 
@@ -471,21 +502,31 @@ Below is an example:
 
 # 📜 LICENSE & DISCLAIMER
 
-This project is under the GPL V3 license, however all custom props and animations were provided to RPEmotes by the community with express permission and must not be extracted from [RpEmotes](https://github.com/TayMcKenzieNZ/rpemotes), reuploaded to any websites, forums or discord servers.
+This repository was created by **TayMcKenzieNZ** for strict usage with the Grand Theft Auto 5 unofficial multiplayer platform 'FiveM', and is under the GNU General Public License v3.0 license.
 
-If you want to modify RpEmotes ***(does not apply if you want to use it for personal purposes)*** or make an agreement, you can contact TayMcKenzieNZ via Discord. Pull requests are actively reviewed and discussed with TayMcKenzieNZ and contributors, and will be accepted as long as they do not contain  animation / prop files *(we need permission before adding them)* breaking changes or suspicious code.
+All custom props and animations were provided to RPEmotes by the community with express permission and must not be extracted from [RpEmotes](https://github.com/TayMcKenzieNZ/rpemotes), reuploaded to any websites, forums or discord servers.
+
+If you want to modify RpEmotes ***(does not apply if you want to use it for personal purposes)*** or make an agreement, you can contact the RPEmotes team via our official [Discord](https://discord.gg/sw3NwDq6C8) by opening a ticket. 
+
+Pull requests are actively reviewed and discussed with TayMcKenzieNZ and the RPEmotes team, and will be accepted as long as they do not contain animation / prop files *(we need permission before adding them)* breaking changes or suspicious and / or malicious code.
+
+We also do not accept any copyright material. This includes but is not limited to McDonald's, Subway, Sony Playstation, Microsoft Xbox, etc.
 
 
 
-✅ You are allowed to use the custom animations explicitly provided within this repository only
+✅ You are allowed to use the custom animations explicitly provided within this repository **only**
 
-✅ You are allowed to add your own custom animations to this resource and use it on your server. The entire content must remain on your server and not be reuploaded.
+✅ You are allowed to use the custom props explicitly provided within this repository **only**
 
-❌ You are not allowed to re-distribute the custom animations provided with this repository either on websites, forums, tebex store or discord.
+✅ You are allowed to add your own custom animations or props to this resource and use it on your server. The entire content must remain on your server and not be reuploaded.
 
-❌ You are not allowed to claim the custom animations provided within this resource as your own work
+❌ You are **not** allowed to re-distribute the custom animations or props provided with this repository either on websites, forums, tebex store, discord or your own scripts / maps.
 
-❌ You are not allowed to sell this script
+❌ You are **not** allowed to claim the custom animations or props provided within this resource as your own work
+
+❌ You are **not** allowed to sell this script or any of the content within it
+
+❌ You are **not** to outright copy code from this script into your own without discussing with the RPEmotes team and getting written consent from all parties
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -493,22 +534,20 @@ If you want to modify RpEmotes ***(does not apply if you want to use it for pers
 
 **All** custom animations and props were added with permissions from the creators and does **not** contain any paid or leaked work.
 
-All animation creators have ***specifically*** asked that their content remains free and that the RPEmotes team and community do not try to profit from them, claim them as their own or reupload them anywhere else but TayMcKenzieNZ's GitHub unless express permission has been arranged and granted by their respective creators, therefore you may not extract the animations and / or use them for your own menus.
+All animation creators have ***specifically*** asked that their content remains free and that the RPEmotes team and community do not try to profit from them, claim them as their own or reupload them anywhere else but TayMcKenzieNZ's GitHub unless express permission has been arranged and granted by their respective creators, therefore you may not extract the animations and props or use them for your own menus unless written permission has been granted to you by the creators.
 
 
-A huge thank  you to the following people for their amazing contributions made to the menu 🫶🏻 :
+A huge thank you to the following people for their amazing contributions made to the menu 🫶🏻 :
+
+- A huge thank you to [Kibook](https://github.com/kibook) for the addition of the Animal Emotes sub menu
+
+- Thank you to [AvaN0x](https://github.com/AvaN0x) for reformatting and assisting with code, additional features and figuring out shared particle effects
 
 - Thank you to [Tigerle](https://forum.cfx.re/u/tigerle_studios) for providing the additional code required to make Shared Emotes work to it's full extent
 
 - Thank you to [SMGMissy](https://forum.cfx.re/u/smgmissy/) for assisting with custom pride flags and how to stream them
 
 - Thank you to [MissSnowie](https://www.gta5-mods.com/users/MissySnowie) for the Explicit Usage Rights Agreement to add free custom animations either publicly available or on their discord and for the motivational and overal moral support
-
-- A huge thank you to [Kibook](https://github.com/kibook) for the addition of the Animal Emotes sub menu
-
-- Thank you to [AvaN0x](https://github.com/AvaN0x) for reformatting and assisting with code, additional features and figuring out shared particle effects
-
-- Thank you to [Scullyy](https://github.com/Scullyy) for reformatting and assisting with code, rebranding of RPEmotes, providing a much more cleaner version checker, and firework RGB research
 
 - Thank you to [GeekGarage](https://github.com/geekgarage) for their knowledge, time and dedication, helping to bring new and exciting features to the menu
 
@@ -534,13 +573,15 @@ A huge thank  you to the following people for their amazing contributions made t
 
 - Thank you to [Kri's Graphic House](https://discord.gg/JueRG3fCy6) for the custom banners
 
+- Thank you to !MWooM#0597 on discord for the custom banners
+
 - Thank you to [BoringNeptune](https://www.gta5-mods.com/users/BoringNeptune) for the custom dance emotes
 
 - Thank you to [CMG Mods](https://www.gta5-mods.com/users/-moses-) for the custom emotes
 
-- Thank you to [prue颜](discord.gg/lunyxmods) for being a great friend and providing us with custom animations
+- Thank you to [prue颜](discord.gg/lunyxmods) for being a great friend and providing us with exclusive custom animations
 
-- Thank you to [PataMods](https://forum.cfx.re/u/Pata_PataMods) for the custom Christmas props
+- Thank you to [PataMods](https://forum.cfx.re/u/Pata_PataMods) for the custom props
 
 - Thank you to [Crowded1337](https://www.gta5-mods.com/users/crowded1337) for the custom Gucci bag. I have removed the Gucci logo to comply with Rockstar Games & TakeTwo Interactive
 
@@ -548,9 +589,9 @@ A huge thank  you to the following people for their amazing contributions made t
 
 - Thanks to [Copofiscool](https://forum.cfx.re/u/copofiscool/) for adding a toggle to the Favorite Keybinds
 
-- Thank you to [Mads](https://github.com/MadsLeander) for contributing to the menu and adding Exit Emotes
+- Thank you to [Mads](https://github.com/MadsLeander) for joining the team as Co-Developer 
 
-- Thank you to [iSentrie](https://forum.cfx.re/u/isentrie/) for additional code and support
+- Thank you to [iSentrie](https://forum.cfx.re/u/isentrie/) for additional code, support and joining the RPEmotes project 
 
 - Thank you to Chocoholic Animations for the custom animations
 
@@ -558,7 +599,11 @@ A huge thank  you to the following people for their amazing contributions made t
 
 - Thank you [KayKayMods](https://discord.gg/5bYQVWVaxG) for the custom props
 
-- Thank you to [MonkeyWhisper](https://github.com/MonkeyWhisper) and [Project Sloth](https://github.com/Project-Sloth) for the custom milkshake props
+- Thank you to [MonkeyWhisper](https://github.com/MonkeyWhisper) and [Project Sloth](https://github.com/Project-Sloth) for the custom props
+
+- Thank you to [Brummieee](https://forum.cfx.re/u/brummieee_maps/summary) for the custom props
+
+- Thank you [Dark Animations](https://www.gta5-mods.com/users/Darks%20Animations) for the partnership and custom animations. You the goat
 
 - Thank you to you, the community for being patient, showing love and appreciation, and for providing translations.
 

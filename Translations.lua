@@ -62,7 +62,8 @@ Config.Languages = {
         ['btn_select'] = "Selecionar",
         ['btn_back'] = "Voltar",
         ['btn_switch'] = "Movimento",
-        ['btn_increment'] = "Incremento"
+        ['btn_increment'] = "Incremento",
+        ['dead'] = "You can't use emotes while dead!"
     },
      ['zhcn'] = { -- Chinese simplified
         ['emotes'] = '动作 🎬',
@@ -127,7 +128,8 @@ Config.Languages = {
         ['btn_select'] = "选择",
         ['btn_back'] = "返回",
         ['btn_switch'] = "移动",
-        ['btn_increment'] = "移动量"
+        ['btn_increment'] = "移动量",
+        ['dead'] = "You can't use emotes while dead!"
     },
     ['zhtw'] = { -- Chinese Traditional
         ['emotes'] = '動作 🎬',
@@ -192,7 +194,8 @@ Config.Languages = {
         ['btn_select'] = "選擇",
         ['btn_back'] = "返回",
         ['btn_switch'] = "移動",
-        ['btn_increment'] = "移動量"
+        ['btn_increment'] = "移動量",
+        ['dead'] = "You can't use emotes while dead!"
     },
     ['cs'] = { -- Czech 🇨🇿
         ['emotes'] = 'Animace 🎬',
@@ -257,7 +260,8 @@ Config.Languages = {
         ['btn_select'] = "Vybrat",
         ['btn_back'] = "Zpět",
         ['btn_switch'] = "Pohyb",
-        ['btn_increment'] = "Increment"
+        ['btn_increment'] = "Increment",
+        ['dead'] = "You can't use emotes while dead!"
     },
     ['da'] = { -- Danish 🇩🇰
         ['emotes'] = 'Animationer',
@@ -322,7 +326,8 @@ Config.Languages = {
         ['btn_select'] = "Vælg",
         ['btn_back'] = "Tilbage",
         ['btn_switch'] = "Bevægelse",
-        ['btn_increment'] = "Increment"
+        ['btn_increment'] = "Increment",
+        ['dead'] = "You can't use emotes while dead!"
     },
     ['nl'] = { -- Dutch 🇳🇱
         ['emotes'] = 'Animaties 🎬',
@@ -387,7 +392,8 @@ Config.Languages = {
         ['btn_select'] = "Selecteren",
         ['btn_back'] = "Terug",
         ['btn_switch'] = "Bewegen",
-        ['btn_increment'] = "Increment"
+        ['btn_increment'] = "Increment",
+        ['dead'] = "Je kunt geen emotes gebruiken wanneer je dood bent!"
     },
     ['en'] = { -- English 🇬🇧
         ['emotes'] = 'Emotes 🎬',
@@ -452,7 +458,9 @@ Config.Languages = {
         ['btn_select'] = "Select",
         ['btn_back'] = "Back",
         ['btn_switch'] = "Movement",
-        ['btn_increment'] = "Increment"
+        ['btn_increment'] = "Increment",
+        ['dead'] = "You can't use emotes while dead!",
+        ['swimming'] = "You can't use emotes while swimming"
     },
     ['fi'] = { -- Finnish 🇫🇮
         ['emotes'] = 'Animaatiot 🎬',
@@ -517,7 +525,8 @@ Config.Languages = {
         ['btn_select'] = "Valitse",
         ['btn_back'] = "Takaisin",
         ['btn_switch'] = "Liike",
-        ['btn_increment'] = "Lisäys"
+        ['btn_increment'] = "Lisäys",
+        ['dead'] = "You can't use emotes while dead!"
     },
     ['fr'] = { -- French 🇫🇷
         ['emotes'] = 'Emotes 🎬',
@@ -581,7 +590,8 @@ Config.Languages = {
         ['btn_select'] = "Sélectionner",
         ['btn_back'] = "Retour",
         ['btn_switch'] = "Mouvement",
-        ['btn_increment'] = "Vitesse déplacement"
+        ['btn_increment'] = "Vitesse déplacement",
+        ['dead'] = "Vous ne pouvez pas faire d'animation en étant mort !"
     },
     ['de'] = { -- German 🇩🇪
         ['emotes'] = 'Emotes 🎬',
@@ -645,7 +655,8 @@ Config.Languages = {
         ['btn_select'] = "Auswählen",
         ['btn_back'] = "Zurück",
         ['btn_switch'] = "Bewegung",
-        ['btn_increment'] = "Increment"
+        ['btn_increment'] = "Increment",
+        ['dead'] = "Du kannst keine Emotes nutzen während du tot bist!"
     },
     ['hu'] = { -- Hungarian 🇭🇺
         ['emotes'] = 'Animációs Menü 🎬',
@@ -710,7 +721,8 @@ Config.Languages = {
         ['btn_select'] = "Kiválasztás",
         ['btn_back'] = "Vissza",
         ['btn_switch'] = "Mozgás",
-        ['btn_increment'] = "Increment"
+        ['btn_increment'] = "Increment",
+        ['dead'] = "You can't use emotes while dead!"
     },
     ['it'] = { -- Italian 🇮🇹
         ['emotes'] = 'Animazioni 🎬',
@@ -775,7 +787,8 @@ Config.Languages = {
         ['btn_select'] = "Seleziona",
         ['btn_back'] = "Indietro",
         ['btn_switch'] = "Movimento",
-        ['btn_increment'] = "Increment"
+        ['btn_increment'] = "Increment",
+        ['dead'] = "You can't use emotes while dead!"
     },
 	['no'] = { -- Norwegian 🇳🇴
         ['emotes'] = 'Animasjoner 🎬',
@@ -840,7 +853,8 @@ Config.Languages = {
         ['btn_select'] = "Velg",
         ['btn_back'] = "Tilbake",
         ['btn_switch'] = "Bevegelse",
-        ['btn_increment'] = "Increment"
+        ['btn_increment'] = "Increment",
+        ['dead'] = "You can't use emotes while dead!"
     },
 	['fa'] = { -- persian 🇮🇷
         ['emotes'] = 'Emotes 🎬',
@@ -905,7 +919,8 @@ Config.Languages = {
         ['btn_select'] = "Select",
         ['btn_back'] = "Back",
         ['btn_switch'] = "Movement",
-        ['btn_increment'] = "Increment"
+        ['btn_increment'] = "Increment",
+        ['dead'] = "You can't use emotes while dead!"
     },
     ['pl'] = { -- Polish 🇵🇱
         ['emotes'] = 'Animacje 🎬',
@@ -970,7 +985,8 @@ Config.Languages = {
         ['btn_select'] = "Wybierz",
         ['btn_back'] = "Wstecz",
         ['btn_switch'] = "Ruch",
-        ['btn_increment'] = "Increment"
+        ['btn_increment'] = "Increment",
+        ['dead'] = "You can't use emotes while dead!"
     },
     ['ro'] = { -- Romanian 🇷🇴
         ['emotes'] = 'Emote-uri 🎬',
@@ -1035,7 +1051,8 @@ Config.Languages = {
         ['btn_select'] = "Selectare",
         ['btn_back'] = "Înapoi",
         ['btn_switch'] = "Mișcare",
-        ['btn_increment'] = "Increment"
+        ['btn_increment'] = "Increment",
+        ['dead'] = "You can't use emotes while dead!"
     },
     ['ru'] = { -- Russian 🇷🇺
         ['emotes'] = 'Эмоции 🎬',
@@ -1100,7 +1117,8 @@ Config.Languages = {
         ['btn_select'] = "Выбрать",
         ['btn_back'] = "Назад",
         ['btn_switch'] = "Движение",
-        ['btn_increment'] = "Increment"
+        ['btn_increment'] = "Increment",
+        ['dead'] = "Вы не можете использовать эмоции, когда умерли!"
     },
     ['lk'] = { -- Sinhala 🇱🇰
         ['emotes'] = 'Emotes 🎬',
@@ -1165,7 +1183,8 @@ Config.Languages = {
         ['btn_select'] = "Select Karanna",
         ['btn_back'] = "Aapassata",
         ['btn_switch'] = "Movement eka",
-        ['btn_increment'] = "Wedi karanna"
+        ['btn_increment'] = "Wedi karanna",
+        ['dead'] = "You can't use emotes while dead!"
     },
     ['es'] = { -- Spanish 🇪🇸
         ['emotes'] = "Animaciones 🎬",
@@ -1229,7 +1248,8 @@ Config.Languages = {
         ['btn_select'] = "Seleccionar",
         ['btn_back'] = "Atrás ",
         ['btn_switch'] = "Movimiento ",
-        ['btn_increment'] = "Increment"
+        ['btn_increment'] = "Increment",
+        ['dead'] = "¡No puedes usar animaciones mientras estás muerto!"
     },
     ['sv'] = { -- Swedish 🇸🇪
         ['emotes'] = 'Emotes 🎬',
@@ -1294,7 +1314,8 @@ Config.Languages = {
         ['btn_select'] = "Välj",
         ['btn_back'] = "Tillbaka",
         ['btn_switch'] = "Rörelse",
-        ['btn_increment'] = "Increment"
+        ['btn_increment'] = "Increment",
+        ['dead'] = "Du kan inte använda animationer när du är död!"
     },
     ['tr'] = { -- Turkish 🇹🇷
         ['emotes'] = 'İfadeler 🎬',
@@ -1359,7 +1380,8 @@ Config.Languages = {
         ['btn_select'] = "Seç",
         ['btn_back'] = "Geri",
         ['btn_switch'] = "Hareket Et",
-        ['btn_increment'] = "Increment"
+        ['btn_increment'] = "Increment",
+        ['dead'] = "You can't use emotes while dead!"
     },
     ['vi'] = { -- Tiếng việt
         ['emotes'] = 'Hành động 🎬',
@@ -1424,6 +1446,7 @@ Config.Languages = {
         ['btn_select'] = "Chọn",
         ['btn_back'] = "Trở lại",
         ['btn_switch'] = "Chuyển động",
-        ['btn_increment'] = "Tăng"
+        ['btn_increment'] = "Tăng",
+        ['dead'] = "You can't use emotes while dead!"
     },
 }
