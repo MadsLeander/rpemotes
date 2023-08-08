@@ -159,7 +159,7 @@ RegisterCommand('emotecancel', function() EmoteCancel() end, false)
 
 local disableHandsupControls = {
     [24] = true,  -- INPUT_ATTACK
-    [25] = true,  -- INPUT_AIM
+    -- [25] = true,  -- INPUT_AIM
     [36] = true,  -- INPUT_DUCK
     [37] = true,  -- INPUT_SELECT_WEAPON
     [44] = true,  -- INPUT_COVER
@@ -174,12 +174,23 @@ local disableHandsupControls = {
     [264] = true, -- INPUT_MELEE_ATTACK2
 }
 
-local function DisableHandsupControlActions()
+local playerId = PlayerId()
+
+local function HandsUpLoop()
     CreateThread(function()
         while inHandsup do
             for control, state in pairs(disableHandsupControls) do
                 DisableControlAction(0, control, state)
             end
+
+            if IsPlayerAiming(playerId) then
+                ClearPedSecondaryTask(PlayerPedId())
+                CreateThread(function()
+                    Wait(350)
+                    inHandsup = false
+                end)
+            end
+
             Wait(0)
         end
     end)
@@ -207,10 +218,8 @@ if Config.HandsupEnabled then
             while not HasAnimDictLoaded(dict) do
                 Wait(0)
             end
-            RequestAnimDict(dict)
-            while not HasAnimDictLoaded(dict) do Wait(1) end
             TaskPlayAnim(PlayerPedId(), dict, "handsup_standing_base", 2.0, 2.0, -1, 49, 0, false, false, false)
-            DisableHandsupControlActions()
+            HandsUpLoop()
         else
             ClearPedSecondaryTask(PlayerPedId())
             if Config.PersistentEmoteAfterHandsup and IsInAnimation then
